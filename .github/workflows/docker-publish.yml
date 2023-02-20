@@ -75,7 +75,7 @@ jobs:
             devoxit/tm_webserver
           tags: |
             type=sha,enabled=true,prefix=ref-
-            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'main') }}
+            type=raw,value=latest,enable=${{ github.ref == format('refs/heads/{0}', 'master') }}
             type=raw,value=v${{steps.get-version-from-package-json.outputs.version}},enable=true
 
       # Build and push Docker image with Buildx (don't push on PR)
