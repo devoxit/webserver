@@ -20,7 +20,7 @@ const getter = (req, res) => {
         var { pl } = req.params
         var { platform } = req.headers
         var _path = ""
-        if (['node', 'aws', 'git', 'sc1'].indexOf(pl) < 0) {
+        if (['node', 'aws', 'git', 'sc1', 'ransim'].indexOf(pl) < 0) {
             return res.status(404).json({ error: "Not found" })
         }
         var ext = extension(platform)
